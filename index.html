@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Note App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="template-section">
+                <h3>เทมเพลตทั้งหมด</h3>
+                <div id="template-list" class="template-menu">
+                    </div>
+            </div>
+
+            <div class="chatbot-section">
+                <div id="chat-container">
+                    <div id="chat-header">Ai</div>
+                    <div id="chat-window">
+                        <div class="bot-msg">เลือกเทมเพลตด้านบนเพื่อเริ่มจด หรือคุยกับผมได้ครับ!</div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="chat-input" placeholder="พิมพ์ข้อความ...">
+                        <button onclick="sendMessage()">ส่ง</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <h2>เขียนบันทึกใหม่</h2>
+            <div class="form-group">
+                <input type="text" id="title" placeholder="หัวข้อบันทึก">
+                <textarea id="content" placeholder="เริ่มเขียนบันทึกของคุณที่นี่..."></textarea>
+                <button class="save-btn" onclick="addNote()">บันทึก Note</button>
+            </div>
+
+            <hr>
+            <h2>รายการบันทึกทั้งหมด</h2>
+            <div id="noteList"></div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
