@@ -22,7 +22,7 @@
                         <div class="bot-msg">เลือกเทมเพลตด้านบนเพื่อเริ่มจด หรือคุยกับผมได้ครับ!</div>
                     </div>
                     <div class="chat-input-area">
-                        <input type="text" id="chat-input" placeholder="พิมพ์ข้อความ...">
+                        <input type="text" id="chat-input" placeholder="พิมพ์ข้อความ..." onkeydown="if(event.key === 'Enter') sendMessage()">
                         <button onclick="sendMessage()">ส่ง</button>
                     </div>
                 </div>
@@ -38,10 +38,10 @@
             </div>
 
             <hr>
-            <h2>รายการบันทึกทั้งหมด</h2>
             <div id="noteList"></div>
         </main>
     </div>
     <script src="app.js"></script>
+    <script src ="chatbont.js"></script>
 </body>
 </html>
